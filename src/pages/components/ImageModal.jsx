@@ -4,7 +4,6 @@ import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "./checkoutForm";
 import "./layout.css";
 
-
 const stripePromise = loadStripe("pk_test_51OEdyLFrT7IGAV5f4HIj6TwDM5WMWdsADNtC5wtnPY98oNp6IwankNJ5J9uJMvwlNnircaaJHGmG5iOxYjMYmKYX006q3poQhw");
 
 const ImageModal = ({ image, price, name, onClose }) => {
@@ -64,15 +63,14 @@ const ImageModal = ({ image, price, name, onClose }) => {
           </div>
           <div className="column is-two-thirds">
             <div className="App">
-              {loading && (
+              {loading ? (
                 <div className="columns is-centered">
                   <div className="column loader-wrapper">
                     <div className="loader is-loading"></div>
                   </div>
                 </div>
-              )}
-              {!loading && clientSecret && (
-                <Elements options={options} stripe={stripePromise}>
+              ) : (
+                <Elements stripe={stripePromise}>
                   <CheckoutForm />
                 </Elements>
               )}

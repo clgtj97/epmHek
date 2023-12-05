@@ -9,20 +9,29 @@
   ],
   "scripts": {
     "develop": "ENABLE_GATSBY_REFRESH_ENDPOINT=true gatsby develop",
-    "start": "gatsby develop",
+    "start": "concurrently \"gatsby develop\" \"node server.js\"",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@stripe/stripe-js": "^1.46.0",
+    "@stripe/react-stripe-js": "^2.1.1",
+    "@stripe/stripe-js": "^1.54.1",
     "bootstrap": "^5.2.3",
     "bulma": "^0.9.4",
-    "gatsby": "^5.5.0",
+    "express": "^4.17.1",
+    "gatsby": "^5.11.0",
     "gatsby-plugin-sass": "^6.5.0",
+    "http-proxy-middleware": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.9.0",
-    "sass": "^1.58.0"
-  }
+    "react-router-dom": "^6.19.0",
+    "sass": "^1.58.0",
+    "stripe": "^12.11.0"
+  },
+  "devDependencies": {
+    "concurrently": "4.1.2"
+  },
+  "homepage": "http://localhost:8000",
+  "proxy": "http://localhost:4242"
 }

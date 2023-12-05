@@ -1,25 +1,14 @@
 import React from "react"
-//import StripeCheckout from "./components/StripeCheckout"
-//import TitleMain from "./components/TitleMain"
-//import Menu from "./components/Menu"
-//import SlidersFirst from "./components/SlidersFirst"
-//import SlidersSecond from "./components/SlidersSecond"
-//import SlidersTre from "./components/SlidersTre"
-//import VideoOne from "./components/VideoOne" <VideoOne />
 import HomeMain from "./components/homeMain"
+import './components/layout.css';
 
 export default function Home() {
   return (
-    <div>
+    <div className="mobileExpand">
+    <header>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:wght@500&display=swap"></link>
+    </header>
       <HomeMain />
-      {/*<SlidersFirst />
-      <SlidersSecond />
-      <SlidersTre />
-      <Menu />
-      <TitleMain />
-      
-      <br />
-      <StripeCheckout /> */}
     </div>
   )
 }

@@ -9,6 +9,23 @@ $custom-colors: ("orange": ($orange, $orange-invert));
 
 @import "~bulma/bulma.sass";
 
+/* Disable overscroll page refresh */
+html,
+body {
+    overscroll-behavior-y: none;
+}
+
+/* Disable overscroll page navigation */
+html,
+body {
+    overscroll-behavior-x: none;
+}
+
+/* Only show the vertical scrollbar if necessary */
+html {
+  overflow-y: auto;
+}
+
 .navbar-item.is-mega {
     position: static;
   
@@ -17,7 +34,10 @@ $custom-colors: ("orange": ($orange, $orange-invert));
       padding: .375rem 1rem;
     }
   }
+
   body {
     line-height: 0.5;
   }
+
+
 

@@ -10,9 +10,7 @@
     "start": "concurrently \"gatsby develop\" \"node server.js\"",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "netlify-build": "gatsby build",
-    "netlify-functions": "netlify-lambda build functions"
+    "clean": "gatsby clean"
   },
   "engines": {
     "node": "14.x"

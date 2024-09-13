@@ -1,0 +1,6 @@
+.env
+.env.development
+node_modules/
+.cache/
+public
+--ignore-engines 

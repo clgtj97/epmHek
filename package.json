@@ -1,0 +1,38 @@
+{
+  "name": "diam",
+  "version": "1.0.0",
+  "private": true,
+  "description": "diam",
+  "author": "clgtj97",
+  "keywords": ["gatsby"],
+  "scripts": {
+    "develop": "ENABLE_GATSBY_REFRESH_ENDPOINT=true gatsby develop",
+    "start": "concurrently \"gatsby develop\" \"node server.js\"",
+    "build": "concurrently \"gatsby develop\" \"node server.js\"",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "dependencies": {
+    "@stripe/react-stripe-js": "^2.1.1",
+    "@stripe/stripe-js": "^1.54.2",
+    "bootstrap": "^5.2.3",
+    "bulma": "^0.9.4",
+    "express": "^4.17.1",
+    "gatsby": "^5.12.11",
+    "gatsby-plugin-sass": "^6.5.0",
+    "http-proxy-middleware": "^2.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.19.0",
+    "sass": "^1.58.0",
+    "stripe": "^12.11.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "homepage": "http://localhost:8000",
+  "proxy": "http://localhost:4242"
+}

@@ -8,12 +8,12 @@
   "scripts": {
     "develop": "ENABLE_GATSBY_REFRESH_ENDPOINT=true gatsby develop",
     "start": "concurrently \"gatsby develop\" \"node server.js\"",
-    "build": "gatsby build",
+    "build": "concurrently \"gatsby develop\" \"node server.js\"",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
   "engines": {
-    "node": "20.x"
+    "node": "14.x"
   },
   "dependencies": {
     "@stripe/react-stripe-js": "^2.1.1",
